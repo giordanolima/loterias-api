@@ -1,0 +1,25 @@
+{
+    "name": "giordanolima/loterias-api",
+    "description": "Web crawler para buscar os resultados das loterias da caixa",
+    "keywords": ["loterias", "caixa", "cef", "caixa econômica federal"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giordano de Andrades Lima",
+            "email": "giordanol@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "GiordanoLima\\LoteriasApi": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    }
+}
