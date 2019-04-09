@@ -30,11 +30,8 @@ class Quina extends LoteriasApi {
     }
 
     public function getDataProximoConcurso() {
-        if($this->json && array_key_exists("dtProximoConcurso", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["dtProximoConcurso"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dtProximoConcursoStr", $this->json))
+            return $this->json["dtProximoConcursoStr"];
     }
 
     public function getPremioAcumulado() {

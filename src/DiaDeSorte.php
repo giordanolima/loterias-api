@@ -60,19 +60,18 @@ class DiaDeSorte extends LoteriasApi {
     }
 
     public function getData() {
-        if($this->json && array_key_exists("dt_APURACAO", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["dt_APURACAO"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dt_APURACAOStr", $this->json))
+            return $this->json["dt_APURACAOStr"];
+    }
+
+    public function getConcursoAtual() {
+        if($this->json && array_key_exists("nu_CONCURSO", $this->json))
+            return $this->json["nu_CONCURSO"];
     }
 
     public function getDataProximoConcurso() {
-        if($this->json && array_key_exists("dt_PROXIMO_CONCURSO", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["dt_PROXIMO_CONCURSO"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dt_PROXIMO_CONCURSOStr", $this->json))
+            return $this->json["dt_PROXIMO_CONCURSOStr"];
     }
 
     public function getPremioAcumulado() {

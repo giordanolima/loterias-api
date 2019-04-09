@@ -38,11 +38,8 @@ class DuplaSena extends LoteriasApi {
     }
 
     public function getDataProximoConcurso() {
-        if($this->json && array_key_exists("data_proximo_concurso", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["data_proximo_concurso"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("data_proximo_concursoStr", $this->json))
+            return $this->json["data_proximo_concursoStr"];
     }
 
     public function acumulado(){

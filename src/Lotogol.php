@@ -71,12 +71,21 @@ class Lotogol extends LoteriasApi {
         }
     }
 
+    public function getConcursoAtual() {
+        $json = (array)$this->json;
+        if(count($json) > 0) {
+            $json = array_shift($json);
+            if(array_key_exists("co_concurso", $json))
+                return $this->json["co_concurso"];
+        }
+    }
+
     public function getData() {
         $json = (array)$this->json;
         if(count($json) > 0) {
             $json = array_shift($json);
-            if(array_key_exists("dt_jogo", $json))
-                return $this->json["dt_jogo"];
+            if(array_key_exists("dt_apuracaoStr", $json))
+                return $this->json["dt_apuracaoStr"];
         }
     }
 
@@ -84,8 +93,8 @@ class Lotogol extends LoteriasApi {
         $json = (array)$this->json;
         if(count($json) > 0) {
             $json = array_shift($json);
-            if(array_key_exists("dt_proximo_concurso", $json))
-                return $this->json["dt_proximo_concurso"];
+            if(array_key_exists("dt_proximo_concursoStr", $json))
+                return $this->json["dt_proximo_concursoStr"];
         }
     }
 

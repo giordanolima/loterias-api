@@ -45,24 +45,23 @@ class Lotofacil extends LoteriasApi {
     }
 
     public function getData() {
-        if($this->json && array_key_exists("dt_apuracao", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["dt_apuracao"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dt_apuracaoStr", $this->json))
+            return $this->json["dt_apuracaoStr"];
     }
 
     public function getDataProximoConcurso() {
-        if($this->json && array_key_exists("dtProximoConcurso", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["dtProximoConcurso"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dtProximoConcursoStr", $this->json))
+            return $this->json["dtProximoConcursoStr"];
     }
 
     public function getPremioAcumulado() {
         if($this->json && array_key_exists("vrAcumuladoFaixa1", $this->json))
             return $this->json["vrAcumuladoFaixa1"];
+    }
+
+    public function getConcursoAtual() {
+        if($this->json && array_key_exists("nu_concurso", $this->json))
+            return $this->json["nu_concurso"];
     }
     
     public function getUrlData() {

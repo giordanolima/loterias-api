@@ -51,6 +51,11 @@ abstract class LoteriasApi {
             return $this->json["resultadoOrdenado"];
     }
 
+    public function getConcursoAtual() {
+        if($this->json && array_key_exists("concurso", $this->json))
+            return $this->json["concurso"];
+    }
+
     public function getConcursoAnterior() {
         if($this->json && array_key_exists("concursoAnterior", $this->json))
             return $this->json["concursoAnterior"];
@@ -62,19 +67,13 @@ abstract class LoteriasApi {
     }
 
     public function getData() {
-        if($this->json && array_key_exists("data", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["data"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dataStr", $this->json))
+            return $this->json["dataStr"];
     }
 
     public function getDataProximoConcurso() {
-        if($this->json && array_key_exists("dt_proximo_concurso", $this->json)){
-            $date = new \DateTime();
-            $date->setTimestamp((int)$this->json["dt_proximo_concurso"]);
-            return $date;
-        }
+        if($this->json && array_key_exists("dt_proximo_concursoStr", $this->json))
+            return $this->json["dt_proximo_concursoStr"];
     }
 
     public function acumulado(){
@@ -96,11 +95,12 @@ abstract class LoteriasApi {
     {
         dump($this->json);
         $fields = [
+            "concurso",
             "resultadoOrdenado",
             "concursoAnterior",
             "proximoConcurso",
-            "data",
-            "dt_proximo_concurso",
+            "dataStr",
+            "dt_proximo_concursoStr",
             "sorteioAcumulado",
             "valor_acumulado",
             "no_cidade"
