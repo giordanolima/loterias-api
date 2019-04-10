@@ -1,4 +1,5 @@
 # Loterias API
+[![Latest Stable Version](https://poser.pugx.org/giordanolima/loterias-api/v/stable)](https://packagist.org/packages/giordanolima/loterias-api) [![Total Downloads](https://poser.pugx.org/giordanolima/loterias-api/downloads)](https://packagist.org/packages/giordanolima/loterias-api) [![License](https://poser.pugx.org/giordanolima/loterias-api/license)](https://packagist.org/packages/giordanolima/loterias-api)
 
 ## Importante!
 > Esta biblioteca é um web crawler do site da Caixa Econômica Federal, podendo parar de responder por alterações na estrutura da página. Se você identificar um erro de acesso a um dos dados, favor abrir uma issue para solução da mesma.
