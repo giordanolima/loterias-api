@@ -42,6 +42,11 @@ class Quina extends LoteriasApi {
         if($this->json && array_key_exists("vrAcumulado", $this->json))
             return $this->json["vrAcumulado"];
     }
+
+    public function getValorEstimado() {
+        if($this->json && array_key_exists("vrEstimado", $this->json))
+            return $this->json["vrEstimado"];
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/quina';

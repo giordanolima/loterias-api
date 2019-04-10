@@ -63,6 +63,10 @@ class Federal extends LoteriasApi {
 
         return $retorno;
     }
+
+    public function getValorEstimado() {
+        return null;
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/federal';
