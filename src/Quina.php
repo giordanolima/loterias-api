@@ -25,6 +25,8 @@ class Quina extends LoteriasApi {
             $retorno["quadra"] = $this->json["valor_quadra"];
         if($this->json && array_key_exists("valor_terno", $this->json))
             $retorno["terno"] = $this->json["valor_terno"];
+        if($this->json && array_key_exists("vr_rateio_duque", $this->json))
+            $retorno["duque"] = $this->json["vr_rateio_duque"];
 
         return $retorno;
     }
