@@ -72,6 +72,11 @@ class Lotomania extends LoteriasApi {
             return $this->json["noCidade"];
     }
 
+    public function getUf() {
+        if($this->json && array_key_exists("sgUf", $this->json))
+            return $this->json["sgUf"];
+    }
+
     public function getPremioAcumulado() {
         if($this->json && array_key_exists("vrAcumuladoFaixa1", $this->json))
             return $this->json["vrAcumuladoFaixa1"];

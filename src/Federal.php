@@ -34,6 +34,11 @@ class Federal extends LoteriasApi {
             return $this->json["cidade"];
     }
 
+    public function getUf() {
+        if($this->json && array_key_exists("ufSorteio", $this->json))
+            return $this->json["ufSorteio"];
+    }
+
     public function getResultado() {
         $retorno = [];
         if($this->json && array_key_exists("premios", $this->json)){

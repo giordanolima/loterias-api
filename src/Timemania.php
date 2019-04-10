@@ -89,6 +89,11 @@ class Timemania extends LoteriasApi {
         if($this->json && array_key_exists("no_CIDADE", $this->json))
             return $this->json["no_CIDADE"];
     }
+
+    public function getUf() {
+        if($this->json && array_key_exists("sg_UF", $this->json))
+            return $this->json["sg_UF"];
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/timemania';

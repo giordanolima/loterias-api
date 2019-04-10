@@ -119,6 +119,10 @@ class Lotogol extends LoteriasApi {
     public function getCidade() {
         return null;
     }
+
+    public function getUf() {
+        return null;
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/lotogol';
