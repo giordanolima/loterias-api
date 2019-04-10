@@ -91,6 +91,11 @@ abstract class LoteriasApi {
             return $this->json["no_cidade"];
     }
 
+    public function getUf() {
+        if($this->json && array_key_exists("sg_uf", $this->json))
+            return $this->json["sg_uf"];
+    }
+
     public function check()
     {
         dump($this->json);
@@ -103,7 +108,8 @@ abstract class LoteriasApi {
             "dt_proximo_concursoStr",
             "sorteioAcumulado",
             "valor_acumulado",
-            "no_cidade"
+            "no_cidade",
+            "sg_uf",
         ];
         foreach ($fields as $f) {
             dump($f . ": " . array_key_exists($f, $this->json));
