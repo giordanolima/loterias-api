@@ -37,7 +37,8 @@ class Federal extends LoteriasApi {
     public function getResultado() {
         $retorno = [];
         if($this->json && array_key_exists("premios", $this->json)){
-            $premios = ((array)$this->json["premios"])[0];
+            $premios = (array)$this->json["premios"];
+            $premios = $premios[0];
 
             if(array_key_exists("premio1", $premios))
                 $retorno["premio1"] = $premios["premio1"];
