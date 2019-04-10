@@ -20,20 +20,20 @@ class Timemania extends LoteriasApi {
     public function getGanhadores() {
         $retorno = [];
 
-        if($this->json && array_key_exists("qt_RATEIO_FAIXA_1", $this->json))
-            $retorno["acertos7"] = $this->json["qt_RATEIO_FAIXA_1"];
+        if($this->json && array_key_exists("qt_GANHADOR_FAIXA_1", $this->json))
+            $retorno["acertos7"] = $this->json["qt_GANHADOR_FAIXA_1"];
             
-        if($this->json && array_key_exists("qt_RATEIO_FAIXA_2", $this->json))
-            $retorno["acertos6"] = $this->json["qt_RATEIO_FAIXA_2"];
+        if($this->json && array_key_exists("qt_GANHADOR_FAIXA_2", $this->json))
+            $retorno["acertos6"] = $this->json["qt_GANHADOR_FAIXA_2"];
 
-        if($this->json && array_key_exists("qt_RATEIO_FAIXA_3", $this->json))
-            $retorno["acertos5"] = $this->json["qt_RATEIO_FAIXA_3"];
+        if($this->json && array_key_exists("qt_GANHADOR_FAIXA_3", $this->json))
+            $retorno["acertos5"] = $this->json["qt_GANHADOR_FAIXA_3"];
 
-        if($this->json && array_key_exists("qt_RATEIO_FAIXA_4", $this->json))
-            $retorno["acertos4"] = $this->json["qt_RATEIO_FAIXA_4"];
+        if($this->json && array_key_exists("qt_GANHADOR_FAIXA_4", $this->json))
+            $retorno["acertos4"] = $this->json["qt_GANHADOR_FAIXA_4"];
 
-        if($this->json && array_key_exists("qt_RATEIO_FAIXA_5", $this->json))
-            $retorno["acertos3"] = $this->json["qt_RATEIO_FAIXA_5"];
+        if($this->json && array_key_exists("qt_GANHADOR_FAIXA_5", $this->json))
+            $retorno["acertos3"] = $this->json["qt_GANHADOR_FAIXA_5"];
 
         if($this->json && array_key_exists("qt_GANHADOR_TIME_CORACAO", $this->json))
             $retorno["time-coracao"] = $this->json["qt_GANHADOR_TIME_CORACAO"];
