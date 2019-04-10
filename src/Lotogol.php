@@ -129,7 +129,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("vr_estimativa", $json))
-                return $this->json["vr_estimativa"];
+                return $json["vr_estimativa"];
         }
     }
     
