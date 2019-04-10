@@ -45,4 +45,5 @@ Uma vez instanciada, a classe oferece os seguintes métodos:
 | ```$api->getDataProximoConcurso() ``` | Retorna a data do próximo sorteio. |
 | ```$api->acumulado() ``` | Indica se o prêmio foi acumulado ou não. |
 | ```$api->getPremioAcumulado() ``` | Retorna o valor acumulado do prêmio. |
-| ```$api->getCidade() ``` | Indica o local de realização do sorteio. |
+| ```$api->getCidade() ``` | Indica a cidade de realização do sorteio. |
+| ```$api->getUf() ``` | Indica o estado de realização do sorteio. |
