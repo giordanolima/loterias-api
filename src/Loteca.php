@@ -69,6 +69,11 @@ class Loteca extends LoteriasApi {
     public function getUf() {
         return null;
     }
+
+    public function getValorEstimado() {
+        if($this->json && array_key_exists("vrEstimativa", $this->json))
+            return $this->json["vrEstimativa"];
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/loteca';

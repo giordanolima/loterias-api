@@ -63,6 +63,11 @@ class Lotofacil extends LoteriasApi {
         if($this->json && array_key_exists("nu_concurso", $this->json))
             return $this->json["nu_concurso"];
     }
+
+    public function getValorEstimado() {
+        if($this->json && array_key_exists("vrEstimativa", $this->json))
+            return $this->json["vrEstimativa"];
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/lotofacil';

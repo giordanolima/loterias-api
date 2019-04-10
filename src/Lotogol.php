@@ -123,6 +123,15 @@ class Lotogol extends LoteriasApi {
     public function getUf() {
         return null;
     }
+
+    public function getValorEstimado() {
+        $json = (array)$this->json;
+        if(count($json) > 0) {
+            $json = array_shift($json);
+            if(array_key_exists("vr_estimativa", $json))
+                return $json["vr_estimativa"];
+        }
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/lotogol';

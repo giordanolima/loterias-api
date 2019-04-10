@@ -81,6 +81,11 @@ class Lotomania extends LoteriasApi {
         if($this->json && array_key_exists("vrAcumuladoFaixa1", $this->json))
             return $this->json["vrAcumuladoFaixa1"];
     }
+
+    public function getValorEstimado() {
+        if($this->json && array_key_exists("vrEstimativa", $this->json))
+            return $this->json["vrEstimativa"];
+    }
     
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/lotomania';

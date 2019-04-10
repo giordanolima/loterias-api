@@ -47,3 +47,4 @@ Uma vez instanciada, a classe oferece os seguintes métodos:
 | ```$api->getPremioAcumulado() ``` | Retorna o valor acumulado do prêmio. |
 | ```$api->getCidade() ``` | Indica a cidade de realização do sorteio. |
 | ```$api->getUf() ``` | Indica o estado de realização do sorteio. |
+| ```$api->getValorEstimado() ``` | Indica o valor estimado da premiação do próximo sorteio. |

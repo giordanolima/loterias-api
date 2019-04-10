@@ -93,6 +93,11 @@ class DuplaSena extends LoteriasApi {
         return $retorno;
     }
 
+    public function getValorEstimado() {
+        if($this->json && array_key_exists("valor_estimativa", $this->json))
+            return $this->json["valor_estimativa"];
+    }
+
     public function getUrlData() {
         return 'http://www.loterias.caixa.gov.br/wps/portal/loterias/landing/duplasena';
     }
