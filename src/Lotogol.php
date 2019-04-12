@@ -26,13 +26,13 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("vr_rateio_faixa1", $json))
-                $retorno["acertos5"] = $this->json["vr_rateio_faixa1"];
+                $retorno["acertos5"] = $json["vr_rateio_faixa1"];
 
             if(array_key_exists("vr_rateio_faixa2", $json))
-                $retorno["acertos4"] = $this->json["vr_rateio_faixa2"];
+                $retorno["acertos4"] = $json["vr_rateio_faixa2"];
 
             if(array_key_exists("vr_rateio_faixa3", $json))
-                $retorno["acertos3"] = $this->json["vr_rateio_faixa3"];
+                $retorno["acertos3"] = $json["vr_rateio_faixa3"];
         }
         return $retorno;                        
     }
@@ -42,13 +42,13 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("qt_ganhador_faixa1", $json))
-                $retorno["acertos5"] = $this->json["qt_ganhador_faixa1"];
+                $retorno["acertos5"] = $json["qt_ganhador_faixa1"];
 
             if(array_key_exists("qt_ganhador_faixa2", $json))
-                $retorno["acertos4"] = $this->json["qt_ganhador_faixa2"];
+                $retorno["acertos4"] = $json["qt_ganhador_faixa2"];
 
             if(array_key_exists("qt_ganhador_faixa3", $json))
-                $retorno["acertos3"] = $this->json["qt_ganhador_faixa3"];
+                $retorno["acertos3"] = $json["qt_ganhador_faixa3"];
         }
         return $retorno;
     }
@@ -58,7 +58,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("concursoAnterior", $json))
-                return $this->json["concursoAnterior"];
+                return $json["concursoAnterior"];
         }
     }
 
@@ -67,7 +67,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("proximoConcurso", $json))
-                return $this->json["proximoConcurso"];
+                return $json["proximoConcurso"];
         }
     }
 
@@ -76,7 +76,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("co_concurso", $json))
-                return $this->json["co_concurso"];
+                return $json["co_concurso"];
         }
     }
 
@@ -85,7 +85,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("dt_apuracaoStr", $json))
-                return $this->json["dt_apuracaoStr"];
+                return $json["dt_apuracaoStr"];
         }
     }
 
@@ -94,7 +94,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("dt_proximo_concursoStr", $json))
-                return $this->json["dt_proximo_concursoStr"];
+                return $json["dt_proximo_concursoStr"];
         }
     }
 
@@ -103,7 +103,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("sorteioAcumulado", $json))
-                return $this->json["sorteioAcumulado"];
+                return $json["sorteioAcumulado"];
         }
     }
 
@@ -112,7 +112,7 @@ class Lotogol extends LoteriasApi {
         if(count($json) > 0) {
             $json = array_shift($json);
             if(array_key_exists("vr_ACUMULADO_FAIXA1", $json))
-                return $this->json["vr_ACUMULADO_FAIXA1"];
+                return $json["vr_ACUMULADO_FAIXA1"];
         }
     }
 
