@@ -14,6 +14,7 @@ class Lotogol extends LoteriasApi {
                     "time2" => $j["time2"],
                     "time1gols" => $j["qt_gol_time1"],
                     "time2gols" => $j["qt_gol_time2"],
+                    "diaDaSemana" => $j["diaDaSemana"],
                 ];
             }
         }
