@@ -46,6 +46,9 @@ class Loteca extends LoteriasApi {
                     "time2" => $j["noTime2"],
                     "resultado" => $resultado,
                     "diadasemana" => $j["diaDaSemana"],
+                    "gols_time1" => $j["qt_gol_time1"],
+                    "gols_time2" => $j["qt_gol_time2"],
+
                 ];
             }
         }
