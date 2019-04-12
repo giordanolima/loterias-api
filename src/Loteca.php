@@ -44,7 +44,8 @@ class Loteca extends LoteriasApi {
                 $retorno["jogo" . $j["icJogo"]] = [
                     "time1" => $j["noTime1"],
                     "time2" => $j["noTime2"],
-                    "resultado" => $resultado
+                    "resultado" => $resultado,
+                    "diadasemana" => $j["diaDaSemana"],
                 ];
             }
         }
